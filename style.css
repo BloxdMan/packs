@@ -43,6 +43,8 @@ main {
     display: flex;
     align-items: center;
     width: 500px;
+    backdrop-filter: blur(2px);
+    border: .5px solid #37ccff8c;
 }
 
 .download-item img {
