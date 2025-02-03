@@ -20,6 +20,8 @@ header {
 
 h1, h2 {
     color: #ffffff;
+    display: flex;
+    justify-content: center;
 }
 
 main {
