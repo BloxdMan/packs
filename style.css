@@ -87,7 +87,7 @@ main {
     outline: none;
 }
 
-.download-button-sublight {
+.download-button {
     border: none;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -96,7 +96,7 @@ main {
     background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
 }
 
-.download-button-sublight:hover {
+.download-button:hover {
     background-color: #1fd1f9;
     background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
     filter: brightness(1.15);
