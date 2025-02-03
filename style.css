@@ -55,7 +55,7 @@ main {
     align-items: center;
     width: 500px;
     backdrop-filter: blur(2px);
-    border: .5px solid #37ccff8c;
+    border: 1.25px solid #63d7ff;
 }
 
 .download-item img {
@@ -70,18 +70,84 @@ main {
     transform: scale(1.05);
 }
 
-.download-button {
-    margin-left: auto;
-    background-color: #5cb8e3;
-    color: #ffffff;
-    padding: 10px 15px;
-    text-decoration: none;
+.custom-button {
+    width: 130px;
+    height: 40px;
+    color: #fff;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
 }
 
-.download-button:hover {
-    background-color: #9a66e3;
+.download-button-sublight {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+}
+
+.download-button-sublight:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+.download-button-bedwars {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #1375ad 74%);
+}
+
+.download-button-bedwars:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #1375ad 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+.download-button-xray {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #ff0f0f 0%, #1612ff 74%);
+}
+
+.download-button-xray:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #ff0f0f 0%, 1612ff 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+.download-button-barebones {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #2beb24 0%, #0ab33d 74%);
+}
+
+.download-button-barebones:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #2beb24 0%, #0ab33d 74%);
+    filter: brightness(1.15);
     transform: scale(1.05);
 }
 
