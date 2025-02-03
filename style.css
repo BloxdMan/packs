@@ -29,6 +29,10 @@ main {
 
 .downloads {
     margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .download-item {
