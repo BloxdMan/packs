@@ -55,7 +55,7 @@ main {
     align-items: center;
     width: 500px;
     backdrop-filter: blur(2px);
-    border: 1.25px solid #63d7ff !important;
+    border: 1.25px solid #63d7ff;
 }
 
 .download-item img {
@@ -89,27 +89,27 @@ main {
 
 .download-button-sublight {
     border: none;
-    transition: all 0.3s ease !important;
-    overflow: hidden !important;
-    margin-left: auto !important;
-    background-color: #1fd1f9 !important;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%) !important;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
 }
 
 .download-button-sublight:hover {
-    background-color: #1fd1f9 !important;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%) !important;
-    filter: brightness(1.15) !important;
-    transform: scale(1.05) !important;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
 }
 
 .download-button-bedwars {
-    border: none !important;
-    transition: all 0.3s ease !important;
-    overflow: hidden !important;
-    margin-left: auto !important;
-    background-color: #1fd1f9 !important;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #1375ad 74%) !important;
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #1375ad 74%);
 }
 
 .download-button-bedwars:hover {
