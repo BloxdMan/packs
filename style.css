@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background-image: url('image/UI.jpg'); /* Set your background image URL here */
+    filter: blur(.5) !important;
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
     color: #e0e0e0;
