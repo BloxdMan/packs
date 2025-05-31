@@ -152,6 +152,38 @@ main {
     transform: scale(1.05);
 }
 
+.download-button-relonix {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #2e75c7 0%, #54b8ff 74%);
+}
+
+.download-button-relonix:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #348aed 0%, #6ec3ff 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
+.download-button-relonix-white {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f2f2f2 74%);
+}
+
+.download-button-relonix-white:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #e0e0e0 0%, #ffffff 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
 footer {
     text-align: center;
     padding: 10px;
