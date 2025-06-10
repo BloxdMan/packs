@@ -125,13 +125,11 @@ main {
     transition: all 0.3s ease;
     overflow: hidden;
     margin-left: auto;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #fa4141 0%, #9c0808 74%);
+    background-color: #1cb2c9;
 }
 
 .download-button-xray:hover {
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #ff5757 0%, #c71a1a 74%);
+    background-color: #3bdef7;
     filter: brightness(1.15);
     transform: scale(1.05);
 }
