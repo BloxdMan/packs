@@ -150,6 +150,22 @@ main {
     transform: scale(1.05);
 }
 
+.download-button-astray {
+    border: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: auto;
+    background-color: #1fd1f9;
+    background-image: linear-gradient(349deg, #1a6eca 0%, #1fbee2 74%);
+}
+
+.download-button-astray:hover {
+    background-color: #1fd1f9;
+    background-image: linear-gradient(349deg, #3294ff 0%, #65e3ff 74%);
+    filter: brightness(1.15);
+    transform: scale(1.05);
+}
+
 .download-button-relonix {
     border: none;
     transition: all 0.3s ease;
@@ -225,3 +241,4 @@ footer {
         margin-bottom: 10px;
     }
 }
+
