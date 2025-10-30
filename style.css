@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('image/UI.jpg'); /* Set your background image URL here */
+    background-image: url('image/UI2.jpg'); /* Set your background image URL here */
     backdrop-filter: blur(.5rem) !important;
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */
@@ -241,4 +241,5 @@ footer {
         margin-bottom: 10px;
     }
 }
+
 
