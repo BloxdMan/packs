@@ -1,230 +1,369 @@
+.background {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('image/UI2.jpg'); /* Set your background image URL here */
-    backdrop-filter: blur(.5rem) !important;
-    background-size: cover; /* Cover the entire viewport */
-    background-position: center; /* Center the image */
-    color: #e0e0e0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  background-image: url(https://iili.io/C2nxRSI.jpg);
+  backdrop-filter: blur(.5rem);
+  background-size: cover;
+  background-position: center; 
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 header {
-    background-color: rgb(17 38 51 / 48%); /* Semi-transparent header */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(17 38 51 / 48%); /* Semi-transparent header */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-h1 {
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
+.webtitle {
+  font-size: 2.5rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
 
-h2 {
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    font-size: 2em
+.everything {
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+  flex-direction: column;
 }
 
-main {
-    flex: 1; /* Allow the main section to expand and push the footer down */
-    padding: 20px;
+.cardlist {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.downloads {
-    margin: 20px 0;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
+.card {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
 }
 
-.download-item {
-    background-color: rgb(17 38 51 / 48%); /* Semi-transparent background for download items */
-    border-radius: 8px;
-    padding: 15px;
-    margin: 10px 0;
-    margin-right: 10px;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    width: 500px;
-    backdrop-filter: blur(2px);
-    border: 1.25px solid #63d7ff;
+.cardTitle {
+  font-size: 1.35rem;
+  color: #ffffff;
+  font-family: "Arial Black";
+  padding: 0.3rem;
+  margin: 0rem;
+  opacity: 1;
 }
 
-.download-item img {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
 }
 
-.download-item img:hover {
-    transform: scale(1.05);
+.front, .defback {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-.custom-button {
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5), 7px 7px 20px 0px rgba(0, 0, 0, .1), 4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
+.defback {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-.download-button {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    margin-left: auto;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+.defback::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #43d9fe, #43d9fe, #43d9fe, #43d9fe, transparent);
+  animation: rotation_481 5000ms infinite linear;
 }
 
-.download-button:hover {
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
-    filter: brightness(1.15);
-    transform: scale(1.05);
+.redback::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #fe4343, rgb(254, 67, 67), #fe4343, #fe4343, transparent);
+  animation: rotation_481 5000ms infinite linear;
 }
 
-.download-button-xray {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    margin-left: auto;
-    background-color: #1cb2c9;
+.defback-content {
+  position: absolute;
+  width: 98%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
-.download-button-xray:hover {
-    background-color: #3bdef7;
-    filter: brightness(1.15);
-    transform: scale(1.05);
+.defback-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  z-index: 0;
 }
 
-.download-button-barebones {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    margin-left: auto;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #2beb24 0%, #0ab33d 74%);
+.card:hover .content {
+  transform: rotateY(180deg);
 }
 
-.download-button-barebones:hover {
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #2beb24 0%, #0ab33d 74%);
-    filter: brightness(1.15);
-    transform: scale(1.05);
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
 }
 
-.download-button-astray {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    margin-left: auto;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(349deg, #1a6eca 0%, #1fbee2 74%);
+.front {
+  transform: rotateY(180deg);
+  color: white;
 }
 
-.download-button-astray:hover {
-    background-color: #1fd1f9;
-    background-image: linear-gradient(349deg, #3294ff 0%, #65e3ff 74%);
-    filter: brightness(1.15);
-    transform: scale(1.05);
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.download-button-relonix {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    margin-left: auto;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #2e75c7 0%, #54b8ff 74%);
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 80%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  margin: 0.5rem;
 }
 
-.download-button-relonix:hover {
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #348aed 0%, #6ec3ff 74%);
-    filter: brightness(1.15);
-    transform: scale(1.05);
+.title {
+  font-size: 14px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.4rem;
 }
 
-.download-button-relonix-white {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-    margin-left: auto;
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #d9d9d9 0%, #f2f2f2 74%);
+.title p {
+  width: 50%;
 }
 
-.download-button-relonix-white:hover {
-    background-color: #1fd1f9;
-    background-image: linear-gradient(315deg, #e0e0e0 0%, #ffffff 74%);
-    filter: brightness(1.15);
-    transform: scale(1.05);
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 8px;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: rgb(17 38 51 / 48%); /* Semi-transparent footer */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
-.social-media {
-    margin-top: 10px;
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #43d9fe;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
 }
 
-.social-media a {
-    margin: 0 10px;
-    color: #86d5fc;
-    text-decoration: none;
-    transition: color 0.3s;
+.redcircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #fe4343;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
 }
 
-.social-media a:hover {
-    color: #9a66e3;
+#bottom {
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    header {
-        padding: 10px;
-    }
-
-    .download-item {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 10px 0;
-    }
-
-    .download-item img {
-        width: 100%; /* Make images full width on mobile */
-        margin-bottom: 10px;
-    }
+#right {
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
 }
 
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
 
+  50% {
+    transform: translateY(10px);
+  }
 
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Logo Image */
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  padding: 1rem;
+  justify-content: center;
+  z-index: 1;
+}
+
+.logo-img {
+  content: "";
+  position: relative;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  width: 100%;
+  height: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.creator {
+  font-size: 11px;
+  opacity: 0.55;
+  letter-spacing: 1px;
+  margin: 0rem;
+}
+
+.gui {
+  content: "";
+  position: relative;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   TITLE + BUTTON LAYOUT
+========================= */
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Makes title fit better */
+.title p {
+  width: auto;
+  margin: 0;
+}
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+.download-btn {
+  background-color: #fff;
+  padding: 0.7em 1.4em;
+  font-size: 9px;
+  margin-right: auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: #292929;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background-color: #2ed5ff;
+
+  box-shadow: #4ad5f750;
+
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.reddownload-btn:hover {
+  background-color: #fe4343;
+
+  box-shadow: #fe434350;
+
+  color: #fff;
+  transform: scale(1.05);
+}
