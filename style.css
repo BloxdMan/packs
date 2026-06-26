@@ -157,7 +157,7 @@ header {
   display: block;
   width: 160px;
   height: 160%;
-  background: linear-gradient(90deg, transparent, #fe4343, rgb(254, 67, 67), #fe4343, #fe4343, transparent);
+  background: linear-gradient(90deg, transparent, #a00000, #ff0000, #ff0000, #a00000, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
@@ -178,6 +178,16 @@ header {
   width: 160px;
   height: 160%;
   background: linear-gradient(90deg, transparent, #ffffff, #ffffff, #ffffff, #ffffff, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.linearback::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #fe43de, #43d9fe, #43d9fe, #fe43de, transparent);
   animation: rotation_481 5000ms infinite linear;
 }
 
@@ -305,6 +315,17 @@ header {
   height: 90px;
   border-radius: 50%;
   background-color: #ffffff;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+.magentacircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #cc38ac;
+  background-image: linear-gradient(45deg, #0ddbff, #0ddbff, #cc38ac, #cc38ac);
   position: relative;
   filter: blur(15px);
   animation: floating 2600ms infinite linear;
@@ -460,10 +481,78 @@ header {
 }
 
 .whitedownload-btn:hover {
-  background-color: #ffffff;
+  background-color: #363636;
 
   box-shadow: #ffffff50;
 
   color: #fff;
   transform: scale(1.05);
+}
+
+.lineardownload-btn:hover {
+  background-color: #00000000;
+  background-image: linear-gradient(45deg, #0ddbff, #cc38ac);
+
+  box-shadow: #00000050;
+
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* =========================
+   PAGE SLIDER
+========================= */
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.cardlist {
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+
+  justify-content: flex-start !important;
+}
+
+.page {
+  min-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.page-controls {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.8;
+}
+
+.page-controls button {
+  background: #1a1a1a73;
+  color: white;
+  border: 1px solid #ffffff69;
+  padding: 0.4rem 1.4rem;
+  cursor: pointer;
+  transition: 0.1s;
+  border-radius: 10px;
+}
+
+.page-controls button:hover {
+  background: #333;
+}
+
+#pageInfo {
+  font-family: Arial;
+  font-size: 0.9rem;
 }
