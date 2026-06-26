@@ -15,7 +15,9 @@
 
 <div class="center">
 
-    <div class="cardlist">
+  <div class="slider-container">
+
+    <div class="cardlist" id="cardlist">
 
       <div class="card"> <!-- STARTS HERE -->
         <div class="content">
@@ -29,6 +31,7 @@
         <p class="date">Last update: 23rd June</p>
 
         </div>
+        
       </div>
 
     </div>
@@ -71,7 +74,7 @@
 
         <div class="background" style="background-image: url(https://iili.io/CxsDgr7.jpg);">
         <div class="logo-img" style="background-image: url(https://iili.io/Cxi0OI1.png); background-size: 70%;"></div>
-        <p class="date">Last update: 19th June</p>
+        <p class="date">Last update: 23rd June</p>
 
         </div>
       </div>
@@ -95,7 +98,7 @@
               </p>
   
               <!-- Download Button -->
-              <button class="download-btn reddownload-btn" onclick="downloadFile('files/Relonix.zip', 'Relonix.zip')">Download</button>
+              <button class="download-btn" onclick="downloadFile('files/Relonix.zip', 'Relonix.zip')">Download</button>
               </button>
 
             </div>
@@ -140,6 +143,50 @@
   
               <!-- Download Button -->
               <button class="download-btn whitedownload-btn" onclick="downloadFile('files/Relonix White.zip', 'Relonix White.zip')">Download</button>
+              </button>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </div> <!-- ENDS HERE -->
+
+          <div class="card"> <!-- STARTS HERE -->
+        <div class="content">
+  
+        <!-- Name, Back-image, Author -->
+        <div class="defback linearback">
+        <div class="back-content">
+
+        <div class="background" style="background-image: url(https://iili.io/CAMTGYG.png);">
+        <div class="logo-img" style="background-image: url(https://iili.io/CARPvdx.png); background-size: 85%;"></div>
+        <p class="date">Last update: 26th June</p>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Title, Text on Top -->
+      <div class="front">
+        <div class="img">
+          <div class="circle magentacircle"></div>
+          <div class="circle magentacircle" id="right"></div>
+          <div class="circle magentacircle" id="bottom"></div>
+        </div>
+        <div class="front-content">
+          <div class="gui" style="background-image: url(https://iili.io/CAWCpZ7.png);"></div>
+          <div class="description">
+            <div class="title">
+
+              <p class="title">
+                <strong>Sublight</strong>
+              </p>
+  
+              <!-- Download Button -->
+              <button class="download-btn lineardownload-btn" onclick="downloadFile('files/Sublight.zip', 'Sublight.zip')">Download</button>
               </button>
 
             </div>
@@ -196,6 +243,14 @@
 
   </div>
 
+  <div class="page-controls">
+    <button id="prevPage">◀</button>
+    <span id="pageInfo">Page 1 / 1</span>
+    <button id="nextPage">▶</button>
+  </div>
+
+</div>
+
 </div>
 
 <script>
@@ -207,7 +262,68 @@
             link.click();
             document.body.removeChild(link);
         }
-    
+</script>
+
+<script>
+
+const cardsPerPage = 4;
+
+const cardList = document.getElementById("cardlist");
+const cards = Array.from(cardList.querySelectorAll(".card"));
+
+const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+let pages = [];
+
+for (let i = 0; i < totalPages; i++) {
+
+    const page = document.createElement("div");
+    page.className = "page";
+
+    cards
+      .slice(i * cardsPerPage, (i + 1) * cardsPerPage)
+      .forEach(card => page.appendChild(card));
+
+    pages.push(page);
+}
+
+cardList.innerHTML = "";
+
+pages.forEach(page => {
+    cardList.appendChild(page);
+});
+
+let currentPage = 0;
+
+const pageInfo = document.getElementById("pageInfo");
+
+function updatePage() {
+
+    cardList.style.transform =
+      `translateX(-${currentPage * 100}%)`;
+
+    pageInfo.textContent =
+      `Page ${currentPage + 1} / ${totalPages}`;
+}
+
+document.getElementById("nextPage").addEventListener("click", () => {
+
+    if (currentPage < totalPages - 1) {
+        currentPage++;
+        updatePage();
+    }
+});
+
+document.getElementById("prevPage").addEventListener("click", () => {
+
+    if (currentPage > 0) {
+        currentPage--;
+        updatePage();
+    }
+});
+
+updatePage();
+
 </script>
 
 </body>
